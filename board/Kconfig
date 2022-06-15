@@ -21,6 +21,13 @@ menu "Device Support"
 		help
 		  Say Y if you want to include support for Samsung Galaxy A51
 
+	config SAMSUNG_GTA4XL
+		bool "Support for Samsung Galaxy Tab S6 Lite"
+		default n
+		depends on EXYNOS_9610
+		help
+		  Say Y if you want to include support for Samsung Galaxy Tab S6 Lite
+
 	config SAMSUNG_STARLTE
 		bool "Support for Samsung Galaxy S9"
 		default n
@@ -37,6 +44,7 @@ menu "Device Specific Addresses"
 		default 0x830000000 if APPLE_N61AP
 		default 0x090000000 if SAMSUNG_DREAMLTE
 		default 0x090000000 if SAMSUNG_A51
+		default 0x090000000 if SAMSUNG_GTA4XL
 		default 0x090000000 if SAMSUNG_STARLTE
 
 	config FRAMEBUFFER_BASE
@@ -45,6 +53,7 @@ menu "Device Specific Addresses"
 		default 0x83e900000 if APPLE_N61AP
 		default 0x0cc000000 if SAMSUNG_DREAMLTE
 		default 0x0ca000000 if SAMSUNG_A51
+		default 0x0ca000000 if SAMSUNG_GTA4XL
 		default 0x0cc000000 if SAMSUNG_STARLTE
 
 	config FRAMEBUFFER_WIDTH
@@ -53,6 +62,7 @@ menu "Device Specific Addresses"
 		default 752 if APPLE_N61AP
 		default 1440 if SAMSUNG_DREAMLTE
 		default 1080 if SAMSUNG_A51
+		default 1200 if SAMSUNG_GTA4XL
 		default 1440 if SAMSUNG_STARLTE
 
 	config FRAMEBUFFER_HEIGHT
@@ -61,6 +71,7 @@ menu "Device Specific Addresses"
 		default 1334 if APPLE_N61AP
 		default 2960 if SAMSUNG_DREAMLTE
 		default 2400 if SAMSUNG_A51
+		default 2000 if SAMSUNG_GTA4XL
 		default 2960 if SAMSUNG_STARLTE
 		
 	config FRAMEBUFFER_STRIDE
@@ -69,6 +80,7 @@ menu "Device Specific Addresses"
 		default 4 if APPLE_N61AP
 		default 4 if SAMSUNG_DREAMLTE
 		default 4 if SAMSUNG_A51
+		default 4 if SAMSUNG_GTA4XL
 		default 4 if SAMSUNG_STARLTE
 
 endmenu
